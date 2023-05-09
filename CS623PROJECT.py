@@ -38,7 +38,7 @@ cur.execute("""
 cur.execute("""
     CREATE TABLE Stock (
         pid VARCHAR(10) REFERENCES Product(prodid) ON DELETE CASCADE ON UPDATE CASCADE,
-        did VARCHAR(10) REFERENCES Depot(depid) ON DELETE CASCADE ON UPDATE CASCADE,
+        dpid VARCHAR(10) REFERENCES Depot(depid) ON DELETE CASCADE ON UPDATE CASCADE,
         quantity VARCHAR(100),
         PRIMARY KEY (pid, did)
     )
